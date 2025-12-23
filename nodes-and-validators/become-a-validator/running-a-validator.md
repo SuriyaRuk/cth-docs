@@ -210,6 +210,8 @@ Check service status:
 docker compose ps
 ```
 
+<figure><img src="../../.gitbook/assets/Screenshot 2568-12-23 at 14.27.38 (1).png" alt=""><figcaption></figcaption></figure>
+
 View logs:
 
 ```bash
@@ -229,12 +231,16 @@ docker compose logs -f geth
 
 Normolly Sync&#x20;
 
+<figure><img src="../../.gitbook/assets/Screenshot 2568-12-23 at 14.21.37.png" alt=""><figcaption></figcaption></figure>
+
 ```bash
 # Specific service
 docker compose logs -f beacon
 ```
 
 Normolly Sync&#x20;
+
+<figure><img src="../../.gitbook/assets/Screenshot 2568-12-23 at 14.20.17.png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 # Specific service
@@ -243,16 +249,45 @@ docker compose logs -f validator
 
 Normolly Sync&#x20;
 
-Check sync status:
+<figure><img src="../../.gitbook/assets/Screenshot 2568-12-23 at 14.19.14.png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 # Execution layer sync status
-docker compose exec geth geth attach /data/geth.ipc --exec "eth.syncing"# Execution layer sync status
+curl -s -X POST http://127.0.0.1:8545   -H "Content-Type: application/json"   --data '{
+    "jsonrpc":"2.0",
+    "method":"eth_syncing",
+    "params":[],
+    "id":1
+  }'
+```
+
+Example output:
+
+```bash
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": false
+}
 ```
 
 ```bash
 # Beacon chain sync status
 curl http://localhost:5052/eth/v1/node/syncing
+```
+
+Example output:
+
+```bash
+{
+  "data": {
+    "is_syncing": false,
+    "is_optimistic": false,
+    "el_offline": false,
+    "head_slot": "41117",
+    "sync_distance": "0"
+  }
+}
 ```
 {% endstep %}
 {% endstepper %}
@@ -468,7 +503,9 @@ curl http://localhost:5052/eth/v1/node/health
 
 ```bash
 # Execution peers
-docker-compose exec geth geth attach /data/geth.ipc --exec "net.peerCount"
+curl -s -X POST http://127.0.0.1:8545 \
+  -H "Content-Type: application/json" \
+  --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}'
 
 # Consensus peers
 curl http://localhost:5052/eth/v1/node/peer_count
