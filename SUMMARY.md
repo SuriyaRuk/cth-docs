@@ -11,7 +11,7 @@
 * [Nodes & Validators](nodes-and-validators/README.md)
   * [Generate Validator Keys](nodes-and-validators/generate-validator-keys.md)
   * [Deposit CTH](nodes-and-validators/deposit-cth.md)
-  * [become-a-validator](nodes-and-validators/become-a-validator/README.md)
+  * [Become-a-validator](nodes-and-validators/become-a-validator/README.md)
     * [Prerequisites](nodes-and-validators/become-a-validator/prerequisites.md)
     * [Running a Validator](nodes-and-validators/become-a-validator/running-a-validator.md)
 * [Withdrawal](withdrawal/README.md)

@@ -8,9 +8,9 @@ For a validator key that was not generated with a `--eth1_withdrawal_address` se
 
 Open the `deposit-cli` folder that you used to generate validator keys.
 
-The folder should contain your generated keys (for example `validator_keys-test`).
+The folder should contain your generated keys (for example `validator_keys`).
 
-![](<../.gitbook/assets/image (20)>)
+<figure><img src="../.gitbook/assets/Screenshot 2568-12-23 at 14.43.57.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -20,20 +20,17 @@ From inside the `deposit-cli` folder run:
 
 {% code title="generate bls-to-execution-change" %}
 ```bash
-./deposit.sh generate-bls-to-execution-change
+./deposit.sh --language english  generate-bls-to-execution-change --chain=cth
 ```
 {% endcode %}
 
 You will be guided through interactive prompts:
 
-* Select language (press Enter for English).
-* Select network (press Enter/choose).
-* Enter: `jib` as the network.
 * Enter your mnemonic (space-separated).
   * Example mnemonic: worry uncover treat tonight input soon worth code benefit hotel hungry stamp subway neck join trap flat music argue air menu quantum volcano connect
 * Enter the index position for the keys to start generating withdrawal credentials (e.g., `0`).
 * Enter a list of the validator index number(s) of your validator(s) as identified on the beacon chain (separate multiple with spaces or commas).
-  * Check your validator indices on: https://dora.jibchain.net
+  * Check your validator indices on: [https://beacon.changnodes.org](https://beacon.changnodes.org/)
   * Examples: `500` (1 validator) or `500, 501, 502` (3 validators).
 * Enter a list of the old BLS withdrawal credentials of your validator(s).
   * Open the `deposit-data.json` file and copy the old withdrawal credential(s).
