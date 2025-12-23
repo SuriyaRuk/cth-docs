@@ -222,12 +222,35 @@ docker compose logs -f beacon
 docker compose logs -f validator
 ```
 
+```bash
+# Specific service
+docker compose logs -f geth
+```
+
+Normolly Sync&#x20;
+
+```bash
+# Specific service
+docker compose logs -f beacon
+```
+
+Normolly Sync&#x20;
+
+```bash
+# Specific service
+docker compose logs -f validator
+```
+
+Normolly Sync&#x20;
+
 Check sync status:
 
 ```bash
 # Execution layer sync status
-docker compose exec geth geth attach /data/geth.ipc --exec "eth.syncing"
+docker compose exec geth geth attach /data/geth.ipc --exec "eth.syncing"# Execution layer sync status
+```
 
+```bash
 # Beacon chain sync status
 curl http://localhost:5052/eth/v1/node/syncing
 ```
