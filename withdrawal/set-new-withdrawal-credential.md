@@ -77,7 +77,7 @@ Use Docker to broadcast the signatures to the consensus client. From the `deposi
 
 {% code title="Broadcast with prysmctl" %}
 ```bash
-docker run -ti -v ./bls_to_execution_changes:/bls_dir gcr.io/prysmaticlabs/prysm/cmd/prysmctl:latest validator withdraw -beacon-node-host=https://metrabyte-cl.jibchain.net/ --path=/bls_dir --accept-terms-of-use --confirm
+docker run -ti -v ./bls_to_execution_changes:/bls_dir gcr.io/prysmaticlabs/prysm/cmd/prysmctl:latest validator withdraw -beacon-node-host=https://cl.cthscan.com --path=/bls_dir --accept-terms-of-use --confirm
 ```
 {% endcode %}
 
