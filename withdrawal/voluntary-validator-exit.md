@@ -56,7 +56,7 @@ In case your validator is active for less than 27 hours, you can not exit the va
 withfrawal.
 
 {% code title="Example output" %}
-```
+```bash
 Password is correct.
 
 Validator 0xaaafec01dd02507e77b22a221eb99bd2c28b7caa54a578519a87ab89f011e0ddfb9564d09c68c7dc5d61be41620067a3 
