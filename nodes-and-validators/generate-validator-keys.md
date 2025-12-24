@@ -136,7 +136,7 @@ Press any key.
 {% endstep %}
 
 {% step %}
-### Your keys can be found at: `validator_keys-test/validator_keys`
+### Your keys can be found at: `validator_keys/validator_keys`
 
 List the directory:
 
