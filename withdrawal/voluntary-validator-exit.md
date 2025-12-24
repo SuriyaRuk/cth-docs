@@ -48,7 +48,7 @@ Exit epoch in approximately 1920 secs
 * Your CTH will be withdrawn to your withdrawal address on epoch: 1726.
 * Check validator status on: [https://beacon.changnodes.org](https://beacon.changnodes.org/)
 
-![](<../.gitbook/assets/image (16)>)
+<figure><img src="../.gitbook/assets/Screenshot 2568-12-24 at 10.11.22.png" alt=""><figcaption></figcaption></figure>
 
 Done!
 
