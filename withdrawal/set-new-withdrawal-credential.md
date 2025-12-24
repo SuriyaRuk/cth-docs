@@ -37,7 +37,7 @@ You will be guided through interactive prompts:
   * Old withdrawal credentials start with `00`.
   * Example: 0098b66b3d28ae0694d1c25e58d0636c3e2a0fe306e57d067aae98de2171820f
 
-![](<../.gitbook/assets/image (21)>)
+<figure><img src="../.gitbook/assets/Screenshot 2568-12-24 at 20.27.45.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -67,7 +67,7 @@ ls ./bls_to_execution_changes
 ```
 {% endcode %}
 
-![](<../.gitbook/assets/image (22)>)
+<figure><img src="../.gitbook/assets/Screenshot 2568-12-24 at 20.29.56.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -82,6 +82,10 @@ docker run -ti -v ./bls_to_execution_changes:/bls_dir gcr.io/prysmaticlabs/prysm
 {% endcode %}
 
 After the command completes, your BLS-to-execution-change should be submitted to the network.
+
+Example Output:
+
+<figure><img src="../.gitbook/assets/Screenshot 2568-12-24 at 20.32.11.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
