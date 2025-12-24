@@ -31,7 +31,7 @@ You will be guided through interactive prompts:
 * Enter the index position for the keys to start generating withdrawal credentials (e.g., `0`).
 * Enter a list of the validator index number(s) of your validator(s) as identified on the beacon chain (separate multiple with spaces or commas).
   * Check your validator indices on: [https://beacon.changnodes.org](https://beacon.changnodes.org/)
-  * Examples: `500` (1 validator) or `500, 501, 502` (3 validators).
+  * Examples:  `3` (1 validator) or `4,5,6` (3 validators).
 * Enter a list of the old BLS withdrawal credentials of your validator(s).
   * Open the `deposit-data.json` file and copy the old withdrawal credential(s).
   * Old withdrawal credentials start with `00`.
